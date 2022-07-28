@@ -2,7 +2,7 @@ import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const addReverseText = createAsyncThunk('reverseText/addReverseText', async (text) => {
-    const response = await axios(`http://localhost:4000/iecho?text=${text}`);
+    const response = await axios(`https://copywite-challenge-api-deploy.herokuapp.com/iecho?text=${text}`);
     return response.data;
 });
 
